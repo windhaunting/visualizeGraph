@@ -25,8 +25,8 @@ class visualizeDynamic(object):
         pass
     
     
-    #visualize in d3 js
-    def subgraphVisualizePlot(self):
+    #main entry visualize matplotlib
+    def funcMainEntrySubgraphVisualizePlot(self):
         '''
         from a sub list ofnodes to get the subgraph
         then show with matplotlib
@@ -37,18 +37,50 @@ class visualizeDynamic(object):
     
         G = readCiscoDataGraph(ciscoAdjacentListFile, ciscoNodeInfoFile)
         candidatesNodeIdLst = [1,3,4,10]
-        self.drawGraph(G, candidatesNodeIdLst)
+        self.subgraphVisualizePlot(G, candidatesNodeIdLst)
     
-
-    def subgraphVisualizePlot(self):
+    #main entry visualize in d3 js
+    def funcMainEntrySubgraphVisualizeD3(self):
         '''
         from a sub list ofnodes to get the subgraph
         then show in D3.js
         '''
+                
+        ciscoNodeInfoFile = "/home/fubao/workDir/ResearchProjects/hierarchicalNetworkQuery/inputData/ciscoProductVulnerability/newCiscoGraphNodeInfo"
+        ciscoAdjacentListFile = "/home/fubao/workDir/ResearchProjects/hierarchicalNetworkQuery/inputData/ciscoProductVulnerability/newCiscoGraphAdjacencyList"
+    
+        G = readCiscoDataGraph(ciscoAdjacentListFile, ciscoNodeInfoFile)
+        outJsonFile = "outputPlot/subgraph.json"
+        candidatesNodeIdLst = [1,3,4,10]
+        self.subgraphVisualizeD3(G, candidatesNodeIdLst, outJsonFile)
+
+
+    #visualize in d3 js
+    def subgraphVisualizeD3(self, G, candidatesNodeIdLst, outJsonFile):
+    
+        #get nodes and edge to create a new graph
+        newG = nx.MultiDiGraph()           #nx.DiGraph() 
+    
+
+        for nodeId in candidatesNodeIdLst:
+            nodeType = G.node[nodeId]['labelType']
+            nodeName = G.node[nodeId]['labelName']
+            newG.add_node(nodeId, labelType=nodeType, labelName=nodeName)
+            neighbors = G.neighbors(nodeId)
+            for nb in neighbors:
+                #key = G[nodeId][nb]["key"]
+                newG.add_edge(nodeId, nb)
+                nodeType = G.node[nb]['labelType']
+                nodeName = G.node[nb]['labelName']
+                newG.add_node(nb, labelType=nodeType, labelName=nodeName)
         
-        
+        #print node and edge sizes
+        print ('438 drawtopKRelatedGraph node and edge sizes: ', len(G), G.size(), len(newG), newG.size())
+        self.saveToJson(newG, outJsonFile)
+        webbrowser.get('firefox').open_new_tab('index2.html')  
+                
     #draw subgraph network nx 
-    def drawGraph(self, G, candidatesNodeIdLst):
+    def subgraphVisualizePlot(self, G, candidatesNodeIdLst):
     
         g = nx.Graph()           #nx.DiGraph() 
         edges = G.edges(candidatesNodeIdLst)
@@ -93,23 +125,22 @@ class visualizeDynamic(object):
         ax.set_xticklabels(deg)
         
     
-    #save to Json    
+    #save to Json first, then use javascript (in .html) to call json 
     def saveToJson(self, G, fname):
         
-        #json.dump(dict(nodes=[{"id": n, "group": G.node[n]['labelType']} for n in G.nodes()],
-        #               links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'])} for u,v in G.edges()]),
-        #          open(fname, 'w'), indent=2)
-        
+        #use label info (name etc) to draw node 
+        '''
         json.dump(dict(links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'], 
                             G.node[u]['labelName'], G.node[v]['labelName'])} for u,v in G.edges()]),
                   open(fname, 'w'), indent=2)
-                  
-    #    data = json_graph.node_link_data(G)
-    #    s = json.dumps(data)
-    #    f = open(fname, 'w')
-    #    f.write(s)
-    #    print ("s :  ", s)
-    
+        '''    
+        
+        #use nodeId as node label info to draw node 
+        json.dump(dict(links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'], 
+                            u,v)} for u,v in G.edges()]),
+                  open(fname, 'w'), indent=2)
+        
+        
     def drawTestGraphOnline(self, G, outJsonFile):
         #test read
         adjacentListFile = "/home/fubao/Desktop/workDir/personalizedQuery/personalizedQuery_Drug/DataPrep/PersonalizedQueryPython/input/small_graph_adjacentList.txt"
@@ -117,33 +148,13 @@ class visualizeDynamic(object):
         saveToJson(G, outJsonFile)
         
         
-    def drawtopKRelatedGraph(self, G, allvisitedNodeForDraw, outJsonFile):
-            #get nodes and edge to create a new graph
-        newG = nx.MultiDiGraph()           #nx.DiGraph() 
-    
-        for nodeId in allvisitedNodeForDraw:
-            nodeType = G.node[nodeId]['labelType']
-            nodeName = G.node[nodeId]['labelName']
-            newG.add_node(nodeId, labelType=nodeType, labelName=nodeName)
-            neighbors = G.neighbors(nodeId)
-            for nb in neighbors:
-                #key = G[nodeId][nb]["key"]
-                newG.add_edge(nodeId, nb)
-                nodeType = G.node[nb]['labelType']
-                nodeName = G.node[nb]['labelName']
-                newG.add_node(nb, labelType=nodeType, labelName=nodeName)
-        
-        #print node and edge sizes
-        print ('438 drawtopKRelatedGraph node and edge sizes: ', len(G), G.size(), len(newG), newG.size())
-        saveToJson(newG, outJsonFile)
-        webbrowser.get('firefox').open_new_tab('index2.html')  
-        
-        
-    
+
+
     
     
 if __name__ == "__main__":
     visualizeDynObj = visualizeDynamic()
-    visualizeDynObj.subgraphVisualize()
+    #visualizeDynObj.funcMainEntrySubgraphVisualizePlot()
     
+    visualizeDynObj.funcMainEntrySubgraphVisualizeD3()
     
