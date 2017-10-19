@@ -12,9 +12,13 @@ import matplotlib.pyplot as plt
 from networkx.readwrite import json_graph;
 import json
 import webbrowser
+import sys
+sys.path.append("../")
 
 from hierarchicalQueryPython.graphCommon import readCiscoDataGraph
 
+
+#plot graph functions here;  plot locally with matplotlib; plot in D3...
 class visualizeDynamic(object):
     
     def __init__(self):
@@ -22,30 +26,41 @@ class visualizeDynamic(object):
     
     
     #visualize in d3 js
-    def subgraphVisualize(self):
+    def subgraphVisualizePlot(self):
         '''
         from a sub list ofnodes to get the subgraph
-        then show in D3.js
+        then show with matplotlib
         '''
         
         ciscoNodeInfoFile = "/home/fubao/workDir/ResearchProjects/hierarchicalNetworkQuery/inputData/ciscoProductVulnerability/newCiscoGraphNodeInfo"
         ciscoAdjacentListFile = "/home/fubao/workDir/ResearchProjects/hierarchicalNetworkQuery/inputData/ciscoProductVulnerability/newCiscoGraphAdjacencyList"
     
         G = readCiscoDataGraph(ciscoAdjacentListFile, ciscoNodeInfoFile)
-        candidatesNodeIdLst = [1,3,4]
-        self.drawGraph(candidatesNodeIdLst)
+        candidatesNodeIdLst = [1,3,4,10]
+        self.drawGraph(G, candidatesNodeIdLst)
+    
+
+    def subgraphVisualizePlot(self):
+        '''
+        from a sub list ofnodes to get the subgraph
+        then show in D3.js
+        '''
+        
         
     #draw subgraph network nx 
     def drawGraph(self, G, candidatesNodeIdLst):
     
         g = nx.Graph()           #nx.DiGraph() 
         edges = G.edges(candidatesNodeIdLst)
-        print ('edges3: ', edges)
+        print ('edges3: ', edges, len(G[1]))
         for eg in edges:
             node0 = eg[0]
             node1 = eg[1]
-            g.add_node(node0, labelName = G.node[node0]['labelName'])
-            g.add_node(node1, labelName = G.node[node1]['labelName'])
+            #g.add_node(node0, labelName = G.node[node0]['labelName'])
+            #g.add_node(node1, labelName = G.node[node1]['labelName'])
+            g.add_node(node0, labelName = str(node0))
+            g.add_node(node1, labelName = str(node1))
+
             g.add_edge(eg[0], eg[1])
         pos = nx.spring_layout(g)
         #A = [3]
@@ -128,5 +143,7 @@ class visualizeDynamic(object):
     
     
 if __name__ == "__main__":
-    subgraphVisualize
+    visualizeDynObj = visualizeDynamic()
+    visualizeDynObj.subgraphVisualize()
+    
     
