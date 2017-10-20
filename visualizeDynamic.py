@@ -126,8 +126,7 @@ class visualizeDynamic(object):
         
     
     #save to Json first, then use javascript (in .html) to call json 
-    def saveToJson(self, G, fname):
-        
+    def saveToJson(self, G, fname):        
         #use label info (name etc) to draw node 
         '''
         json.dump(dict(links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'], 
