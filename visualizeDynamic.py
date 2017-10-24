@@ -15,7 +15,7 @@ import webbrowser
 import sys
 sys.path.append("../")
 
-from hierarchicalQueryPython.graphCommon import readCiscoDataGraph
+from hierarchicalQueryPython.graphCommon import readCiscoDataGraph, readTestGraph
 
 
 #plot graph functions here;  plot locally with matplotlib; plot in D3...
@@ -144,7 +144,7 @@ class visualizeDynamic(object):
         #test read
         adjacentListFile = "/home/fubao/Desktop/workDir/personalizedQuery/personalizedQuery_Drug/DataPrep/PersonalizedQueryPython/input/small_graph_adjacentList.txt"
         G = readTestGraph(adjacentListFile)
-        saveToJson(G, outJsonFile)
+        self.saveToJson(G, outJsonFile)
         
         
 
@@ -156,4 +156,3 @@ if __name__ == "__main__":
     #visualizeDynObj.funcMainEntrySubgraphVisualizePlot()
     
     visualizeDynObj.funcMainEntrySubgraphVisualizeD3()
-    import ipdb; ipdb.set_trace()
