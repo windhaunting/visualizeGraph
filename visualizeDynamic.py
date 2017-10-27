@@ -15,7 +15,7 @@ import webbrowser
 import sys
 sys.path.append("../")
 
-from hierarchicalQueryPython.graphCommon import readCiscoDataGraph, readTestGraph
+from hierarchicalQueryPython.graphCommon import readCiscoDataGraph, readTestGraph, readEdgeListToGraph
 
 
 #plot graph functions here;  plot locally with matplotlib; plot in D3...
@@ -26,9 +26,9 @@ class visualizeDynamic(object):
     
     
     #main entry visualize matplotlib
-    def funcMainEntrySubgraphVisualizePlot(self):
+    def funcMainEntrySubgraphVisualizePlotCisoProductGraph(self):
         '''
-        from a sub list ofnodes to get the subgraph
+        from a sub list ofnodes to get the subgraph from cisco data graph
         then show with matplotlib
         '''
         
@@ -40,18 +40,47 @@ class visualizeDynamic(object):
         self.subgraphVisualizePlot(G, candidatesNodeIdLst)
     
     #main entry visualize in d3 js
-    def funcMainEntrySubgraphVisualizeD3(self):
+    def funcMainEntrySubgraphVisualizeD3CisoProductGraph(self):
         '''
-        from a sub list ofnodes to get the subgraph
+        from a sub list ofnodes to get the subgraph from cisco data graph
         then show in D3.js
         '''
                 
-        ciscoNodeInfoFile = "/home/fubao/workDir/ResearchProjects/hierarchicalNetworkQuery/inputData/ciscoProductVulnerability/newCiscoGraphNodeInfo"
-        ciscoAdjacentListFile = "/home/fubao/workDir/ResearchProjects/hierarchicalNetworkQuery/inputData/ciscoProductVulnerability/newCiscoGraphAdjacencyList"
+        ciscoNodeInfoFile = "../inputData/ciscoProductVulnerability/newCiscoGraphNodeInfo"
+        ciscoAdjacentListFile = "../inputData/ciscoProductVulnerability/newCiscoGraphAdjacencyList"
     
         G = readCiscoDataGraph(ciscoAdjacentListFile, ciscoNodeInfoFile)
         outJsonFile = "outputPlot/subgraph.json"
         candidatesNodeIdLst = [1,3,4,10]
+        self.subgraphVisualizeD3(G, candidatesNodeIdLst, outJsonFile)
+
+
+    #main entry visualize matplotlib
+    def funcMainEntrySubgraphVisualizePlotSyntheticGraph(self):
+        '''
+        from a sub list ofnodes to get the subgraph from synthetic data graph
+        then show with matplotlib
+        '''
+        syntheticGraphNodeInfoFile = "../../GraphQuerySearchRelatedPractice/Data/syntheticGraph/syntheticGraph_hierarchiRandom/syntheticGraphNodeInfo.tsv"
+        syntheticGraphEdgeListFile = "../../GraphQuerySearchRelatedPractice/Data/syntheticGraph/syntheticGraph_hierarchiRandom/syntheticGraphEdgeListInfo.tsv"
+    
+        G = readEdgeListToGraph(syntheticGraphEdgeListFile, syntheticGraphNodeInfoFile)
+        candidatesNodeIdLst = [648027, 636461,8150, 28487, 72908, 16117, 16118]
+        self.subgraphVisualizePlot(G, candidatesNodeIdLst)
+        
+        
+   #main entry visualize in d3 js
+    def funcMainEntrySubgraphVisualizeD3SyntheticGraph(self):
+        '''
+        from a sub list ofnodes to get the subgraph from synthetic data graph
+        then show in D3.js
+        '''
+        syntheticGraphNodeInfoFile = "../../GraphQuerySearchRelatedPractice/Data/syntheticGraph/syntheticGraph_hierarchiRandom/syntheticGraphNodeInfo.tsv"
+        syntheticGraphEdgeListFile = "../../GraphQuerySearchRelatedPractice/Data/syntheticGraph/syntheticGraph_hierarchiRandom/syntheticGraphEdgeListInfo.tsv"
+    
+        G = readEdgeListToGraph(syntheticGraphEdgeListFile, syntheticGraphNodeInfoFile)
+        outJsonFile = "outputPlot/subgraphSyntheticGraph.json"
+        candidatesNodeIdLst = [648027, 636461,8150, 28487, 72908, 16117, 16118]
         self.subgraphVisualizeD3(G, candidatesNodeIdLst, outJsonFile)
 
 
@@ -155,4 +184,7 @@ if __name__ == "__main__":
     visualizeDynObj = visualizeDynamic()
     #visualizeDynObj.funcMainEntrySubgraphVisualizePlot()
     
-    visualizeDynObj.funcMainEntrySubgraphVisualizeD3()
+    #visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
+    
+    #visualizeDynObj.funcMainEntrySubgraphVisualizePlotSyntheticGraph()
+    visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
