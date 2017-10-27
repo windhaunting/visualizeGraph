@@ -132,8 +132,7 @@ class visualizeDynamic(object):
         #nx.draw(g, pos=pos, with_labels = True, node_color = colorMap, width= 2, labels =nx.get_node_attributes(g,'labelName'))   # labels =nx.get_node_attributes(G,'labelName'))
         nx.draw(g, pos)
         nx.draw_networkx_labels(g, pos, node_color = colorMap, labels = nx.get_node_attributes(g,'labelName'))
-        nx.draw_networkx_edge_labels(g, pos, labels = nx.get_edge_attributes(g,'hierarchy'))
-
+        nx.draw_networkx_edge_labels(g, pos, labels = nx.get_edge_attributes(g,'hierarchy')['edgeHierDistance'])
 
 
         #nx.draw_networkx_edges(g, pos=pos,  node_color= colorMap,  labels =nx.get_node_attributes(g,'labelName'))
