@@ -115,7 +115,7 @@ class visualizeDynamic(object):
     
         g = nx.Graph()           #nx.DiGraph() 
         edges = G.edges(candidatesNodeIdLst)
-        print ('edges3: ', edges, len(G[1]))
+        #print ('edges3: ', edges, len(G[1]))
         for eg in edges:
             node0 = eg[0]
             node1 = eg[1]
@@ -124,15 +124,15 @@ class visualizeDynamic(object):
             g.add_node(node0, labelName = str(node0)+"_" + str(G.node[node0]['labelType']))
             g.add_node(node1, labelName = str(node1)+"_" + str(G.node[node1]['labelType']))
 
-            g.add_edge(eg[0], eg[1])
+            g.add_edge(eg[0], eg[1], key='hierarchy', edgeHierDistance = G[eg[0]][eg[1]]['hierarchy']['edgeHierDistance'])
         pos = nx.spring_layout(g)
         #A = [3]
         #noCor = ["b" if n in A else "r" for n in G.nodes()]
         colorMap = [G.node[nd]['labelType'] for nd in g.nodes()]
         #nx.draw(g, pos=pos, with_labels = True, node_color = colorMap, width= 2, labels =nx.get_node_attributes(g,'labelName'))   # labels =nx.get_node_attributes(G,'labelName'))
-        
+        nx.draw(g, pos)
         nx.draw_networkx_labels(g, pos, node_color = colorMap, labels = nx.get_node_attributes(g,'labelName'))
-        nx.draw_networkx_edge_labels(G, pos, labels = nx.get_edge_attributes(G,'hierarchy'))
+        nx.draw_networkx_edge_labels(g, pos, labels = nx.get_edge_attributes(g,'hierarchy'))
 
 
 
@@ -140,7 +140,8 @@ class visualizeDynamic(object):
         #h = G.subgraph(A)
         #nx.draw_networkx_nodes(h,pos=pos, node_color=noCor) #or even nx.draw(h,pos=pos,node_color='b') to get nodes and edges in one command
         #nx.draw_networkx_edges(h,pos=pos)
-        plt.savefig('graph.pdf')
+        plt.savefig('subgraph.pdf')
+        plt.show()
 
     def drawDegree(self, G):
         #G = nx.gnp_random_graph(100, 0.02)
