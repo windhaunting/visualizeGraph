@@ -65,7 +65,9 @@ class visualizeDynamic(object):
         syntheticGraphEdgeListFile = "../../GraphQuerySearchRelatedPractice/Data/syntheticGraph/syntheticGraph_hierarchiRandom/syntheticGraphEdgeListInfo.tsv"
     
         G = readEdgeListToGraph(syntheticGraphEdgeListFile, syntheticGraphNodeInfoFile)
-        candidatesNodeIdLst = [648027, 636461,8150, 28487, 72908, 16117, 16118]
+        #candidatesNodeIdLst = [648027, 636461,8150, 28487, 72908, 16117, 16118]
+        candidatesNodeIdLst = [648027, 8150]
+
         self.subgraphVisualizePlot(G, candidatesNodeIdLst)
         
         
@@ -80,7 +82,7 @@ class visualizeDynamic(object):
     
         G = readEdgeListToGraph(syntheticGraphEdgeListFile, syntheticGraphNodeInfoFile)
         outJsonFile = "outputPlot/subgraphSyntheticGraph.json"
-        candidatesNodeIdLst = [648027, 636461,8150, 28487, 72908, 16117, 16118]
+        candidatesNodeIdLst = [648027, 636461, 8150, 28487, 72908, 16117, 16118]
         self.subgraphVisualizeD3(G, candidatesNodeIdLst, outJsonFile)
 
 
@@ -119,15 +121,22 @@ class visualizeDynamic(object):
             node1 = eg[1]
             #g.add_node(node0, labelName = G.node[node0]['labelName'])
             #g.add_node(node1, labelName = G.node[node1]['labelName'])
-            g.add_node(node0, labelName = str(node0))
-            g.add_node(node1, labelName = str(node1))
+            g.add_node(node0, labelName = str(node0)+"_" + str(G.node[node0]['labelType']))
+            g.add_node(node1, labelName = str(node1)+"_" + str(G.node[node1]['labelType']))
 
             g.add_edge(eg[0], eg[1])
         pos = nx.spring_layout(g)
         #A = [3]
         #noCor = ["b" if n in A else "r" for n in G.nodes()]
-        nx.draw(g, pos=pos, with_labels = True, labels =nx.get_node_attributes(g,'labelName'))   # labels =nx.get_node_attributes(G,'labelName'))
-        #nx.draw_networkx_edges(G,pos=pos, edgelist = edges, node_color='b')
+        colorMap = [G.node[nd]['labelType'] for nd in g.nodes()]
+        #nx.draw(g, pos=pos, with_labels = True, node_color = colorMap, width= 2, labels =nx.get_node_attributes(g,'labelName'))   # labels =nx.get_node_attributes(G,'labelName'))
+        
+        nx.draw_networkx_labels(g, pos, node_color = colorMap, labels = nx.get_node_attributes(g,'labelName'))
+        nx.draw_networkx_edge_labels(G, pos, labels = nx.get_edge_attributes(G,'hierarchy'))
+
+
+
+        #nx.draw_networkx_edges(g, pos=pos,  node_color= colorMap,  labels =nx.get_node_attributes(g,'labelName'))
         #h = G.subgraph(A)
         #nx.draw_networkx_nodes(h,pos=pos, node_color=noCor) #or even nx.draw(h,pos=pos,node_color='b') to get nodes and edges in one command
         #nx.draw_networkx_edges(h,pos=pos)
@@ -186,5 +195,5 @@ if __name__ == "__main__":
     
     #visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
     
-    #visualizeDynObj.funcMainEntrySubgraphVisualizePlotSyntheticGraph()
-    visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
+    visualizeDynObj.funcMainEntrySubgraphVisualizePlotSyntheticGraph()
+   # visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
