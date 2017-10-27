@@ -130,8 +130,8 @@ class visualizeDynamic(object):
         #noCor = ["b" if n in A else "r" for n in G.nodes()]
         colorMap = [G.node[nd]['labelType'] for nd in g.nodes()]
         #nx.draw(g, pos=pos, with_labels = True, node_color = colorMap, width= 2, labels =nx.get_node_attributes(g,'labelName'))   # labels =nx.get_node_attributes(G,'labelName'))
-        nx.draw(g, pos)
-        nx.draw_networkx_labels(g, pos, node_color = colorMap, labels = nx.get_node_attributes(g,'labelName'))
+        nx.draw(g, pos, node_color = colorMap)
+        nx.draw_networkx_labels(g, pos,  labels = nx.get_node_attributes(g,'labelName'))
         nx.draw_networkx_edge_labels(g, pos, labels = nx.get_edge_attributes(g,'hierarchy'))
 
 
