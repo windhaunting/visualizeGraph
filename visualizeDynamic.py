@@ -124,7 +124,7 @@ class visualizeDynamic(object):
             g.add_node(node0, labelName = str(node0)+"_" + str(G.node[node0]['labelType']))
             g.add_node(node1, labelName = str(node1)+"_" + str(G.node[node1]['labelType']))
 
-            g.add_edge(eg[0], eg[1], key='hierarchy', levelDiff = G[eg[0]][eg[1]]['hierarchy']['edgeHierDistance'])
+            g.add_edge(eg[0], eg[1], e = G[eg[0]][eg[1]]['hierarchy']['edgeHierDistance'])
         pos = nx.spring_layout(g)
         #A = [3]
         #noCor = ["b" if n in A else "r" for n in G.nodes()]
@@ -132,7 +132,7 @@ class visualizeDynamic(object):
         #nx.draw(g, pos=pos, with_labels = True, node_color = colorMap, width= 2, labels =nx.get_node_attributes(g,'labelName'))   # labels =nx.get_node_attributes(G,'labelName'))
         nx.draw(g, pos, node_color = colorMap)
         nx.draw_networkx_labels(g, pos,  labels = nx.get_node_attributes(g,'labelName'))
-        nx.draw_networkx_edge_labels(g, pos, labels = nx.get_edge_attributes(g,'hierarchy'))
+        nx.draw_networkx_edge_labels(g, pos, labels = nx.get_edge_attributes(g,'e'))
 
 
         #nx.draw_networkx_edges(g, pos=pos,  node_color= colorMap,  labels =nx.get_node_attributes(g,'labelName'))
