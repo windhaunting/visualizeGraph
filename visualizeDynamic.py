@@ -51,7 +51,7 @@ class visualizeDynamic(object):
         ciscoAdjacentListFile = "../inputData/ciscoProductVulnerability/newCiscoGraphAdjacencyList"
     
         G = readCiscoDataGraph(ciscoAdjacentListFile, ciscoNodeInfoFile)
-        outJsonFile = "outputPlot/subgraph.json"
+        outJsonFile = "outputPlot/subgraphCisco.json"
         candidatesNodeIdLst = [1,3,4,10]
         self.subgraphVisualizeD3(G, candidatesNodeIdLst, outJsonFile)
 
