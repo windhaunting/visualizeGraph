@@ -101,7 +101,7 @@ class visualizeDynamic(object):
             neighbors = G.neighbors(nodeId)
             for nb in neighbors:
                 #key = G[nodeId][nb]["key"]
-                newG.add_edge(nodeId, nb, h = G[nodeId][nb]['hierarchy']['edgeHierDistance'])
+                newG.add_edge(nodeId, nb, key='hier', edgeHierDistance = G[nodeId][nb]['hierarchy']['edgeHierDistance'])
                 #newG.add_edge(nb, nodeId, h = G[nb][nodeId]['hierarchy']['edgeHierDistance'])
                 nodeType = G.node[nb]['labelType']
                 nodeName = G.node[nb]['labelName']
@@ -177,7 +177,7 @@ class visualizeDynamic(object):
         
         #use nodeId as node label info to draw node 
         json.dump(dict(links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'], 
-                            u,v, nx.get_edge_attributes(G,'h'))} for u,v in G.edges()]),
+                            u,v, G[u][v]['hier']['edgeHierDistance'])} for u,v in G.edges()]),
                   open(fname, 'w'), indent=2)
         
         
