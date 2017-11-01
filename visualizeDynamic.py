@@ -177,7 +177,7 @@ class visualizeDynamic(object):
         
         #use nodeId as node label info to draw node 
         json.dump(dict(links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'], 
-                            u,v)} for u,v in G.edges()]),
+                            u,v, nx.get_edge_attributes(G,'h'))} for u,v in G.edges()]),
                   open(fname, 'w'), indent=2)
         
         
