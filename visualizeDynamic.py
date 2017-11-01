@@ -139,7 +139,7 @@ class visualizeDynamic(object):
         #h = G.subgraph(A)
         #nx.draw_networkx_nodes(h,pos=pos, node_color=noCor) #or even nx.draw(h,pos=pos,node_color='b') to get nodes and edges in one command
         #nx.draw_networkx_edges(h,pos=pos)
-        plt.savefig('subgraph.pdf')
+        plt.savefig('outputPlot/subgraph.pdf')
         plt.show()
 
 
