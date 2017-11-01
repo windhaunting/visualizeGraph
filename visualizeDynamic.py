@@ -102,6 +102,7 @@ class visualizeDynamic(object):
             for nb in neighbors:
                 #key = G[nodeId][nb]["key"]
                 newG.add_edge(nodeId, nb, h = G[nodeId][nb]['hierarchy']['edgeHierDistance'])
+                #newG.add_edge(nb, nodeId, h = G[nb][nodeId]['hierarchy']['edgeHierDistance'])
                 nodeType = G.node[nb]['labelType']
                 nodeName = G.node[nb]['labelName']
                 newG.add_node(nb, labelType=nodeType, labelName=nodeName)
