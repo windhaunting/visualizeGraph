@@ -37,6 +37,7 @@ class visualizeDynamic(object):
     
         G = readCiscoDataGraph(ciscoAdjacentListFile, ciscoNodeInfoFile)
         candidatesNodeIdLst = [1,3,4,10]
+        
         self.subgraphVisualizePlot(G, candidatesNodeIdLst)
     
     #main entry visualize in d3 js
@@ -66,12 +67,12 @@ class visualizeDynamic(object):
     
         G = readEdgeListToGraph(syntheticGraphEdgeListFile, syntheticGraphNodeInfoFile)
         #candidatesNodeIdLst = [648027, 636461,8150, 28487, 72908, 16117, 16118]
-        candidatesNodeIdLst = [648027, 8150]
+        candidatesNodeIdLst = [3002]
 
         self.subgraphVisualizePlot(G, candidatesNodeIdLst)
         
         
-   #main entry visualize in d3 js
+    #main entry visualize in d3 js
     def funcMainEntrySubgraphVisualizeD3SyntheticGraph(self):
         '''
         from a sub list ofnodes to get the subgraph from synthetic data graph
@@ -82,7 +83,8 @@ class visualizeDynamic(object):
     
         G = readEdgeListToGraph(syntheticGraphEdgeListFile, syntheticGraphNodeInfoFile)
         outJsonFile = "outputPlot/subgraphSyntheticGraph.json"
-        candidatesNodeIdLst = [648027, 636461, 8150, 28487, 72908, 16117, 16118]
+        #candidatesNodeIdLst = [648027, 636461, 8150, 28487, 72908, 16117, 16118]
+        candidatesNodeIdLst = [648027, 636461]
         self.subgraphVisualizeD3(G, candidatesNodeIdLst, outJsonFile)
 
 
@@ -92,7 +94,6 @@ class visualizeDynamic(object):
         #get nodes and edge to create a new graph
         newG = nx.MultiDiGraph()           #nx.DiGraph() 
     
-
         for nodeId in candidatesNodeIdLst:
             nodeType = G.node[nodeId]['labelType']
             nodeName = G.node[nodeId]['labelName']
@@ -100,7 +101,7 @@ class visualizeDynamic(object):
             neighbors = G.neighbors(nodeId)
             for nb in neighbors:
                 #key = G[nodeId][nb]["key"]
-                newG.add_edge(nodeId, nb)
+                newG.add_edge(nodeId, nb, h = G[nodeId][nb]['hierarchy']['edgeHierDistance'])
                 nodeType = G.node[nb]['labelType']
                 nodeName = G.node[nb]['labelName']
                 newG.add_node(nb, labelType=nodeType, labelName=nodeName)
@@ -113,7 +114,7 @@ class visualizeDynamic(object):
     #draw subgraph network nx 
     def subgraphVisualizePlot(self, G, candidatesNodeIdLst):
     
-        g = nx.Graph()           #nx.DiGraph() 
+        g = nx.MultiDiGraph()               #  nx.Graph()  #nx.DiGraph() 
         edges = G.edges(candidatesNodeIdLst)
         #print ('edges3: ', edges, len(G[1]))
         for eg in edges:
@@ -124,7 +125,7 @@ class visualizeDynamic(object):
             g.add_node(node0, labelName = str(node0)+"_" + str(G.node[node0]['labelType']))
             g.add_node(node1, labelName = str(node1)+"_" + str(G.node[node1]['labelType']))
 
-            g.add_edge(eg[0], eg[1], e = G[eg[0]][eg[1]]['hierarchy']['edgeHierDistance'])
+            g.add_edge(eg[0], eg[1], h = G[eg[0]][eg[1]]['hierarchy']['edgeHierDistance'])            # 'h' is the hierarchical level distance edge
         pos = nx.spring_layout(g)
         #A = [3]
         #noCor = ["b" if n in A else "r" for n in G.nodes()]
@@ -132,8 +133,7 @@ class visualizeDynamic(object):
         #nx.draw(g, pos=pos, with_labels = True, node_color = colorMap, width= 2, labels =nx.get_node_attributes(g,'labelName'))   # labels =nx.get_node_attributes(G,'labelName'))
         nx.draw(g, pos, node_color = colorMap)
         nx.draw_networkx_labels(g, pos,  labels = nx.get_node_attributes(g,'labelName'))
-        nx.draw_networkx_edge_labels(g, pos, labels = nx.get_edge_attributes(g,'e'))
-
+        nx.draw_networkx_edge_labels(g, pos, labels = nx.get_edge_attributes(g,'h'))
 
         #nx.draw_networkx_edges(g, pos=pos,  node_color= colorMap,  labels =nx.get_node_attributes(g,'labelName'))
         #h = G.subgraph(A)
@@ -142,6 +142,8 @@ class visualizeDynamic(object):
         plt.savefig('subgraph.pdf')
         plt.show()
 
+
+    #draw degree histrogram of graph
     def drawDegree(self, G):
         #G = nx.gnp_random_graph(100, 0.02)
         #average degree
@@ -195,5 +197,5 @@ if __name__ == "__main__":
     
     #visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
     
-    visualizeDynObj.funcMainEntrySubgraphVisualizePlotSyntheticGraph()
-   # visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
+    #visualizeDynObj.funcMainEntrySubgraphVisualizePlotSyntheticGraph()
+    visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
