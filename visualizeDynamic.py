@@ -110,7 +110,7 @@ class visualizeDynamic(object):
         #print node and edge sizes
         print ('438 drawtopKRelatedGraph node and edge sizes: ', len(G), G.size(), len(newG), newG.size())
         self.saveToJson(newG, outJsonFile)
-        webbrowser.get('firefox').open_new_tab('index2.html')  
+        webbrowser.get('firefox').open_new_tab('plotIndex.html')  
                 
     #draw subgraph network nx 
     def subgraphVisualizePlot(self, G, candidatesNodeIdLst):
@@ -170,18 +170,24 @@ class visualizeDynamic(object):
     def saveToJson(self, G, fname):        
         #use label info (name etc) to draw node 
         
+        '''
         json.dump(dict(links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'], 
                             G.node[u]['labelName'], G.node[v]['labelName'], G[u][v]['hier']['edgeHierDistance'])} for u,v in G.edges()]),
                   open(fname, 'w'), indent=2)
        
     
-        '''    
+        '''
+        '''
         #use nodeId as node label info to draw node 
         json.dump(dict(links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'], 
                             u,v, G[u][v]['hier']['edgeHierDistance'])} for u,v in G.edges()]),
                   open(fname, 'w'), indent=2)
         '''
-    
+        
+        json.dump(dict(links=[{"source":u, "target":v, "src_type":G.node[u]['labelType'], "dst_type": G.node[v]['labelType'], "src_name":G.node[u]['labelName'], "dst_name":G.node[v]['labelName'], "edge_hier":G[u][v]['hier']['edgeHierDistance']} for u,v in G.edges()]),
+                  open(fname, 'w'), indent=2)
+
+        
         
     def drawTestGraphOnline(self, G, outJsonFile):
         #test read
