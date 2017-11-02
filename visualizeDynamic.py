@@ -83,8 +83,8 @@ class visualizeDynamic(object):
     
         G = readEdgeListToGraph(syntheticGraphEdgeListFile, syntheticGraphNodeInfoFile)
         outJsonFile = "outputPlot/subgraphSyntheticGraph.json"
-        #candidatesNodeIdLst = [648027, 636461, 8150, 28487, 72908, 16117, 16118]
-        candidatesNodeIdLst = [648027, 636461]
+        candidatesNodeIdLst = [648027, 636461, 8150, 28487, 72908, 16117, 16118]
+        #candidatesNodeIdLst = [648027, 636461]
         self.subgraphVisualizeD3(G, candidatesNodeIdLst, outJsonFile)
 
 
