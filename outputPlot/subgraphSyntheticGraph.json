@@ -1,202 +1,202 @@
 {
   "links": [
     {
+      "source": 648027,
       "target": 260271,
       "value": [
         2,
         0,
-        648027,
-        260271,
+        "type0inherit_648027_",
+        "type0hier_260271_",
         0
-      ],
-      "source": 648027
+      ]
     },
     {
+      "source": 648027,
       "target": 83026,
       "value": [
         2,
         0,
-        648027,
-        83026,
+        "type0inherit_648027_",
+        "type0hier_83026_",
         0
-      ],
-      "source": 648027
+      ]
     },
     {
+      "source": 648027,
       "target": 44531,
       "value": [
         2,
         0,
-        648027,
-        44531,
+        "type0inherit_648027_",
+        "type0hier_44531_",
         0
-      ],
-      "source": 648027
+      ]
     },
     {
+      "source": 648027,
       "target": 807092,
       "value": [
         2,
         4,
-        648027,
-        807092,
+        "type0inherit_648027_",
+        "type0generic_807092_",
         0
-      ],
-      "source": 648027
+      ]
     },
     {
+      "source": 648027,
       "target": 805656,
       "value": [
         2,
         4,
-        648027,
-        805656,
+        "type0inherit_648027_",
+        "type0generic_805656_",
         0
-      ],
-      "source": 648027
+      ]
     },
     {
+      "source": 648027,
       "target": 590219,
       "value": [
         2,
         1,
-        648027,
-        590219,
+        "type0inherit_648027_",
+        "type1hier_590219_",
         0
-      ],
-      "source": 648027
+      ]
     },
     {
+      "source": 648027,
       "target": 72908,
       "value": [
         2,
         0,
-        648027,
-        72908,
+        "type0inherit_648027_",
+        "type0hier_72908_",
         0
-      ],
-      "source": 648027
+      ]
     },
     {
+      "source": 648027,
       "target": 787026,
       "value": [
         2,
         3,
-        648027,
-        787026,
+        "type0inherit_648027_",
+        "type1inherit_787026_",
         0
-      ],
-      "source": 648027
+      ]
     },
     {
+      "source": 648027,
       "target": 250077,
       "value": [
         2,
         0,
-        648027,
-        250077,
+        "type0inherit_648027_",
+        "type0hier_250077_",
         0
-      ],
-      "source": 648027
+      ]
     },
     {
+      "source": 636461,
       "target": 191184,
       "value": [
         2,
         0,
-        636461,
-        191184,
+        "type0inherit_636461_",
+        "type0hier_191184_",
         0
-      ],
-      "source": 636461
+      ]
     },
     {
+      "source": 636461,
       "target": 375712,
       "value": [
         2,
         1,
-        636461,
-        375712,
+        "type0inherit_636461_",
+        "type1hier_375712_",
         0
-      ],
-      "source": 636461
+      ]
     },
     {
+      "source": 636461,
       "target": 698674,
       "value": [
         2,
         2,
-        636461,
-        698674,
+        "type0inherit_636461_",
+        "type0inherit_698674_",
         0
-      ],
-      "source": 636461
+      ]
     },
     {
+      "source": 636461,
       "target": 145344,
       "value": [
         2,
         0,
-        636461,
-        145344,
+        "type0inherit_636461_",
+        "type0hier_145344_",
         0
-      ],
-      "source": 636461
+      ]
     },
     {
+      "source": 636461,
       "target": 485077,
       "value": [
         2,
         1,
-        636461,
-        485077,
+        "type0inherit_636461_",
+        "type1hier_485077_",
         0
-      ],
-      "source": 636461
+      ]
     },
     {
+      "source": 636461,
       "target": 982358,
       "value": [
         2,
         6,
-        636461,
-        982358,
+        "type0inherit_636461_",
+        "type2generic_982358_",
         0
-      ],
-      "source": 636461
+      ]
     },
     {
+      "source": 636461,
       "target": 694936,
       "value": [
         2,
         2,
-        636461,
-        694936,
+        "type0inherit_636461_",
+        "type0inherit_694936_",
         0
-      ],
-      "source": 636461
+      ]
     },
     {
+      "source": 636461,
       "target": 72908,
       "value": [
         2,
         0,
-        636461,
-        72908,
+        "type0inherit_636461_",
+        "type0hier_72908_",
         0
-      ],
-      "source": 636461
+      ]
     },
     {
+      "source": 636461,
       "target": 295663,
       "value": [
         2,
         0,
-        636461,
-        295663,
+        "type0inherit_636461_",
+        "type0hier_295663_",
         0
-      ],
-      "source": 636461
+      ]
     }
   ]
 }

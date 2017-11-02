@@ -169,17 +169,19 @@ class visualizeDynamic(object):
     #save to Json first, then use javascript (in .html) to call json 
     def saveToJson(self, G, fname):        
         #use label info (name etc) to draw node 
-        '''
-        json.dump(dict(links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'], 
-                            G.node[u]['labelName'], G.node[v]['labelName'])} for u,v in G.edges()]),
-                  open(fname, 'w'), indent=2)
-        '''    
         
+        json.dump(dict(links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'], 
+                            G.node[u]['labelName'], G.node[v]['labelName'], G[u][v]['hier']['edgeHierDistance'])} for u,v in G.edges()]),
+                  open(fname, 'w'), indent=2)
+       
+    
+        '''    
         #use nodeId as node label info to draw node 
         json.dump(dict(links=[{"source":u, "target":v, "value":(G.node[u]['labelType'], G.node[v]['labelType'], 
                             u,v, G[u][v]['hier']['edgeHierDistance'])} for u,v in G.edges()]),
                   open(fname, 'w'), indent=2)
-        
+        '''
+    
         
     def drawTestGraphOnline(self, G, outJsonFile):
         #test read
