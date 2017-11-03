@@ -196,8 +196,6 @@ class visualizeDynamic(object):
         self.saveToJson(G, outJsonFile)
         
         
-
-
     
     
 if __name__ == "__main__":
