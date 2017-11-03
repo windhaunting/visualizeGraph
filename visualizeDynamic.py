@@ -184,7 +184,7 @@ class visualizeDynamic(object):
                   open(fname, 'w'), indent=2)
         '''
         
-        json.dump(dict(links=[{"source":u, "target":v, "src_type":G.node[u]['labelType'], "dst_type": G.node[v]['labelType'], "src_name":G.node[u]['labelName'], "dst_name":G.node[v]['labelName'], "edge_hier":G[u][v]['hier']['edgeHierDistance']} for u,v in G.edges()]),
+        json.dump(dict(links=[{"source":u, "target":v, "src_type":G.node[u]['labelType'], "dst_type": G.node[v]['labelType'], "src_name":G.node[u]['labelName'], "dst_name":G.node[v]['labelName'], "edge_hier": str(u) + "->" + str(v) + ":" + G[u][v]['hier']['edgeHierDistance']} for u,v in G.edges()]),
                   open(fname, 'w'), indent=2)
 
         
