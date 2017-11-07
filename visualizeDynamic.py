@@ -82,20 +82,22 @@ class visualizeDynamic(object):
         syntheticGraphEdgeListFile = "../../GraphQuerySearchRelatedPractice/Data/syntheticGraph/syntheticGraph_hierarchiRandom/syntheticGraphEdgeListInfo.tsv"
     
         G = readEdgeListToGraph(syntheticGraphEdgeListFile, syntheticGraphNodeInfoFile)
-        outJsonFile = "outputPlot/subgraphSyntheticGraph.json"
+        outJsonFile = "outputPlot/subgraphSyntheticGraphPath.json"
         specificNodesLst = [648027, 636461]
         candidatesNodesLst = [8150, 28487, 72908, 16117, 16118]
         #candidatesNodeIdLst = [648027, 636461, 8150, 28487, 72908, 16117, 16118]
         #candidatesNodeIdLst = [648027, 636461]
-        self.subgraphVisualizeD3(G, specificNodesLst, candidatesNodesLst, outJsonFile)
-
+        #self.subgraphVisualizeD3(G, specificNodesLst + candidatesNodesLst, outJsonFile)
+        self.subgraphVisualizeD3Paths(G, specificNodesLst, candidatesNodesLst, outJsonFile)
 
     #visualize in d3 js
-    def subgraphVisualizeD3(self, G, candidatesNodeIdLst, outJsonFile):
-    
+    def subgraphVisualizeD3NodeNeighbor(self, G, candidatesNodeIdLst, outJsonFile):
+        '''
+        visualize node and its neighbors
+        '''
         #get nodes and edge to create a new graph
         newG = nx.MultiDiGraph()           #nx.DiGraph() 
-    
+            
         for nodeId in candidatesNodeIdLst:
             nodeType = G.node[nodeId]['labelType']
             nodeName = G.node[nodeId]['labelName']
@@ -113,7 +115,22 @@ class visualizeDynamic(object):
         print ('438 drawtopKRelatedGraph node and edge sizes: ', len(G), G.size(), len(newG), newG.size())
         self.saveToJson(newG, outJsonFile)
         webbrowser.get('firefox').open_new_tab('plotIndex.html')  
-                
+    
+    def subgraphVisualizeD3Paths(self, G, specificNodesLst, candidatesNodeIdLst, outJsonFile):
+        '''
+        visualize the shortest path from specificNodesLst to candidatesNodeIdLst
+        '''
+         #get nodes and edge to create a new graph
+        newG = nx.MultiDiGraph()           #nx.DiGraph()
+        for srcId in candidatesNodeIdLst:
+            nodeType = G.node[srcId]['labelType']
+            nodeName = G.node[srcId]['labelName']
+            newG.add_node(srcId, labelType=nodeType, labelName=nodeName)
+            for dstId in candidatesNodeIdLst:
+                #get all shortest paths in [srcId, dstId]
+                shortestPath = [p for p in nx.all_shortest_paths(G,source=srcId,target=dstId)]   # nx.all_shortest_paths(G, srcId, dstId)
+                #get nodes
+                newG.add_node() for nd in shortestPath
     #draw subgraph network nx 
     def subgraphVisualizePlot(self, G, candidatesNodeIdLst):
     
