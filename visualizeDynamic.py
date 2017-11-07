@@ -86,7 +86,8 @@ class visualizeDynamic(object):
 
         outJsonFile = "outputPlot/subgraphSyntheticGraphPath.json"
         specificNodesLst = [648027, 636461]
-        candidatesNodesLst = [8150, 28487, 72908, 16117, 16118]
+        candidatesNodesLst = [72908, 16118, 260271, 145344, 295663, 83026, 250077, 44531, 191184, 31959]
+        #candidatesNodesLst = [8150, 28487, 72908, 16117, 16118]
         #candidatesNodeIdLst = [648027, 636461, 8150, 28487, 72908, 16117, 16118]
         #candidatesNodeIdLst = [648027, 636461]
         #self.subgraphVisualizeD3(G, specificNodesLst + candidatesNodesLst, outJsonFile)
