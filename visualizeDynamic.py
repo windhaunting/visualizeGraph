@@ -124,13 +124,14 @@ class visualizeDynamic(object):
         '''
          #get nodes and edge to create a new graph
         newG = nx.MultiDiGraph()           #nx.DiGraph()
-        for srcId in candidatesNodeIdLst:
+        for srcId in specificNodesLst:
             #nodeType = G.node[srcId]['labelType']
             #nodeName = G.node[srcId]['labelName']
             #newG.add_node(srcId, labelType=nodeType, labelName=nodeName)
             for dstId in candidatesNodeIdLst:
                 #get all shortest paths in [srcId, dstId]
                 shortestPathLst = [p for p in nx.all_shortest_paths(G,source=srcId,target=dstId)]   # nx.all_shortest_paths(G, srcId, dstId)
+                print ('subgraphVisualizeD3Paths:', srcId, dstId, shortestPathLst)
                 #get nodes
                 for onePath in shortestPathLst:
                     prevNd = onePath[0]
