@@ -85,12 +85,14 @@ class visualizeDynamic(object):
         #outJsonFile = "outputPlot/subgraphSyntheticGraph.json"
 
         outJsonFile = "outputPlot/subgraphSyntheticGraphPath.json"
-        specificNodesLst = [662132, 609465]
-        candidatesNodesLst = [113498, 174080, 264665, 188907, 66531]
-        #candidatesNodesLst = [8150, 28487, 72908, 16117, 16118]
-        #candidatesNodeIdLst = [648027, 636461, 8150, 28487, 72908, 16117, 16118]
-        #candidatesNodeIdLst = [648027, 636461]
-        #self.subgraphVisualizeD3(G, specificNodesLst + candidatesNodesLst, outJsonFile)
+        #specificNodesLst = [662132, 609465]
+        #candidatesNodesLst = [113498, 174080, 264665, 188907, 66531]
+        
+        specificNodesLst = [695138, 655399]
+        candidatesNodesLst = [208373, 87764, 13025, 15365, 13026]
+        
+        
+     
         self.subgraphVisualizeD3Paths(G, specificNodesLst, candidatesNodesLst, outJsonFile)
 
     #visualize in d3 js
