@@ -85,8 +85,8 @@ class visualizeDynamic(object):
         #outJsonFile = "outputPlot/subgraphSyntheticGraph.json"
 
         outJsonFile = "outputPlot/subgraphSyntheticGraphPath.json"
-        specificNodesLst = [648027, 636461]
-        candidatesNodesLst = [72908, 16118, 260271, 145344, 295663, 83026, 250077, 44531, 191184, 31959]
+        specificNodesLst = [662132, 609465]
+        candidatesNodesLst = [113498, 174080, 264665, 249623, 168404, 628210, 938500]
         #candidatesNodesLst = [8150, 28487, 72908, 16117, 16118]
         #candidatesNodeIdLst = [648027, 636461, 8150, 28487, 72908, 16117, 16118]
         #candidatesNodeIdLst = [648027, 636461]
@@ -145,7 +145,7 @@ class visualizeDynamic(object):
            #print node and edge sizes
         print ('subgraphVisualizeD3Paths node and edge sizes: ', len(G), G.size(), len(newG), newG.size())
         self.saveToJson(newG, outJsonFile)
-        webbrowser.get('firefox').open_new_tab('plotIndex.html')       
+       # webbrowser.get('firefox').open_new_tab('plotIndex.html')       
                     
     #draw subgraph network nx 
     def subgraphVisualizePlot(self, G, candidatesNodeIdLst):
