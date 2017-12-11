@@ -46,15 +46,17 @@ class visualizeDynamic(object):
         from a sub list ofnodes to get the subgraph from cisco data graph
         then show in D3.js
         '''
-                
-        ciscoNodeInfoFile = "../inputData/ciscoProductVulnerability/newCiscoGraphNodeInfo"
-        ciscoAdjacentListFile = "../inputData/ciscoProductVulnerability/newCiscoGraphAdjacencyList"
+          
+        ciscoEdgeListfile = "../../GraphQuerySearchRelatedPractice/Data/ciscoDataGraph/ciscoDataGraphInfo1.0/edgeListPart1.0"
+        ciscoNodeInfoFile = "../../GraphQuerySearchRelatedPractice/Data/ciscoDataGraph/ciscoDataGraphInfo1.0/nodeInfoPart1.0"
+        G = readEdgeListToGraph(ciscoEdgeListfile, ciscoNodeInfoFile)
     
-        G = readCiscoDataGraph(ciscoAdjacentListFile, ciscoNodeInfoFile)
-        outJsonFile = "outputPlot/subgraphCisco.json"
-        candidatesNodeIdLst = [1,3,4,10]
-        self.subgraphVisualizeD3(G, candidatesNodeIdLst, outJsonFile)
-
+        outJsonFile = "outputPlot/subgraphCiscoQueryResult.json"
+      
+        specificNodesLst = [3237, 5446]
+        candidatesNodesLst = [3215, 99, 817, 819, 818]
+           
+        self.subgraphVisualizeD3Paths(G, specificNodesLst, candidatesNodesLst, outJsonFile)
 
     #main entry visualize matplotlib
     def funcMainEntrySubgraphVisualizePlotSyntheticGraph(self):
@@ -242,8 +244,8 @@ class visualizeDynamic(object):
 if __name__ == "__main__":
     visualizeDynObj = visualizeDynamic()
     #visualizeDynObj.funcMainEntrySubgraphVisualizePlot()
-    
-    #visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
-    
+        
     #visualizeDynObj.funcMainEntrySubgraphVisualizePlotSyntheticGraph()
-    visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
+    #visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
+    
+    visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
