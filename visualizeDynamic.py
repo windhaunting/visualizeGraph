@@ -53,9 +53,12 @@ class visualizeDynamic(object):
     
         outJsonFile = "outputPlot/subgraphCiscoQueryResult.json"
       
-        specificNodesLst = [3237, 5446]
-        candidatesNodesLst = [3215, 99, 817, 819, 818]
+        #specificNodesLst = [3237, 5446]
+        #candidatesNodesLst = [3215, 99, 817, 819, 818]
            
+        specificNodesLst = [2020, 9021]
+        candidatesNodesLst = [1062, 513, 3603, 226, 707]        
+        
         self.subgraphVisualizeD3Paths(G, specificNodesLst, candidatesNodesLst, outJsonFile)
 
     #main entry visualize matplotlib
