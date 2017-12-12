@@ -57,7 +57,7 @@ class visualizeDynamic(object):
         #candidatesNodesLst = [3215, 99, 817, 819, 818]
            
         specificNodesLst = [2020, 9021]
-        candidatesNodesLst = [1062, 8818, 1075, 183, 4505]        
+        candidatesNodesLst = [4453, 3627, 7277, 1062, 1089]        
         
         self.subgraphVisualizeD3Paths(G, specificNodesLst, candidatesNodesLst, outJsonFile)
 
