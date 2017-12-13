@@ -1,0 +1,634 @@
+{
+  "links": [
+    {
+      "source": 2020,
+      "target": 1063,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco asa software ikev1 and ikev2 buffer overflow vulnerability",
+      "dst_name": "cisco webex meetings server versions 1.x",
+      "edge_hier": "2020->1063: 0"
+    },
+    {
+      "source": 2020,
+      "target": 1064,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco asa software ikev1 and ikev2 buffer overflow vulnerability",
+      "dst_name": "cisco webex meetings server versions 2.x",
+      "edge_hier": "2020->1064: 0"
+    },
+    {
+      "source": 2020,
+      "target": 1514,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco asa software ikev1 and ikev2 buffer overflow vulnerability",
+      "dst_name": "cisco d9858 advanced receiver transcoder",
+      "edge_hier": "2020->1514: 0"
+    },
+    {
+      "source": 2020,
+      "target": 1014,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco asa software ikev1 and ikev2 buffer overflow vulnerability",
+      "dst_name": "cisco unified computing system b-series blade servers",
+      "edge_hier": "2020->1014: 0"
+    },
+    {
+      "source": 2020,
+      "target": 231,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco asa software ikev1 and ikev2 buffer overflow vulnerability",
+      "dst_name": "cisco anyres vod (cal)",
+      "edge_hier": "2020->231: 0"
+    },
+    {
+      "source": 1063,
+      "target": 1062,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco webex meetings server versions 1.x",
+      "dst_name": "easy vpn",
+      "edge_hier": "1063->1062: -1"
+    },
+    {
+      "source": 1064,
+      "target": 1062,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco webex meetings server versions 2.x",
+      "dst_name": "easy vpn",
+      "edge_hier": "1064->1062: -1"
+    },
+    {
+      "source": 1064,
+      "target": 9014,
+      "src_type": 0,
+      "dst_type": 4,
+      "src_name": "cisco webex meetings server versions 2.x",
+      "dst_name": "voice - communications manager additional apps and plugins",
+      "edge_hier": "1064->9014: 0"
+    },
+    {
+      "source": 1514,
+      "target": 9088,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco d9858 advanced receiver transcoder",
+      "dst_name": "latam-spvideo",
+      "edge_hier": "1514->9088: 0"
+    },
+    {
+      "source": 1514,
+      "target": 9289,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco d9858 advanced receiver transcoder",
+      "dst_name": "htts-cr-hw",
+      "edge_hier": "1514->9289: 0"
+    },
+    {
+      "source": 1514,
+      "target": 9036,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco d9858 advanced receiver transcoder",
+      "dst_name": "co-hardware",
+      "edge_hier": "1514->9036: 0"
+    },
+    {
+      "source": 9088,
+      "target": 662,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "latam-spvideo",
+      "dst_name": "cisco 12000 series spa interface processors running cisco ios software",
+      "edge_hier": "9088->662: 0"
+    },
+    {
+      "source": 662,
+      "target": 9243,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco 12000 series spa interface processors running cisco ios software",
+      "dst_name": "apac-ggn-hardware",
+      "edge_hier": "662->9243: 0"
+    },
+    {
+      "source": 662,
+      "target": 9021,
+      "src_type": 0,
+      "dst_type": 4,
+      "src_name": "cisco 12000 series spa interface processors running cisco ios software",
+      "dst_name": "router and ios architecture",
+      "edge_hier": "662->9021: 0"
+    },
+    {
+      "source": 9289,
+      "target": 662,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "htts-cr-hw",
+      "dst_name": "cisco 12000 series spa interface processors running cisco ios software",
+      "edge_hier": "9289->662: 0"
+    },
+    {
+      "source": 9289,
+      "target": 1188,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "htts-cr-hw",
+      "dst_name": "cisco 7600 series route switch processor 720",
+      "edge_hier": "9289->1188: 0"
+    },
+    {
+      "source": 9289,
+      "target": 226,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "htts-cr-hw",
+      "dst_name": "cisco catalyst 6500 series supervisor engines",
+      "edge_hier": "9289->226: 0"
+    },
+    {
+      "source": 9036,
+      "target": 662,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "co-hardware",
+      "dst_name": "cisco 12000 series spa interface processors running cisco ios software",
+      "edge_hier": "9036->662: 0"
+    },
+    {
+      "source": 9036,
+      "target": 1188,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "co-hardware",
+      "dst_name": "cisco 7600 series route switch processor 720",
+      "edge_hier": "9036->1188: 0"
+    },
+    {
+      "source": 9036,
+      "target": 513,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "co-hardware",
+      "dst_name": "cisco router and security device manager",
+      "edge_hier": "9036->513: 0"
+    },
+    {
+      "source": 9036,
+      "target": 226,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "co-hardware",
+      "dst_name": "cisco catalyst 6500 series supervisor engines",
+      "edge_hier": "9036->226: 0"
+    },
+    {
+      "source": 1188,
+      "target": 9243,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco 7600 series route switch processor 720",
+      "dst_name": "apac-ggn-hardware",
+      "edge_hier": "1188->9243: 0"
+    },
+    {
+      "source": 1188,
+      "target": 9021,
+      "src_type": 0,
+      "dst_type": 4,
+      "src_name": "cisco 7600 series route switch processor 720",
+      "dst_name": "router and ios architecture",
+      "edge_hier": "1188->9021: 0"
+    },
+    {
+      "source": 1188,
+      "target": 9564,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco 7600 series route switch processor 720",
+      "dst_name": "rtp-vpn",
+      "edge_hier": "1188->9564: 0"
+    },
+    {
+      "source": 513,
+      "target": 9243,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco router and security device manager",
+      "dst_name": "apac-ggn-hardware",
+      "edge_hier": "513->9243: 0"
+    },
+    {
+      "source": 513,
+      "target": 9515,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco router and security device manager",
+      "dst_name": "cr-vpn-soltns",
+      "edge_hier": "513->9515: 0"
+    },
+    {
+      "source": 513,
+      "target": 9021,
+      "src_type": 0,
+      "dst_type": 4,
+      "src_name": "cisco router and security device manager",
+      "dst_name": "router and ios architecture",
+      "edge_hier": "513->9021: 0"
+    },
+    {
+      "source": 513,
+      "target": 9564,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco router and security device manager",
+      "dst_name": "rtp-vpn",
+      "edge_hier": "513->9564: 0"
+    },
+    {
+      "source": 513,
+      "target": 9312,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco router and security device manager",
+      "dst_name": "ind-vpn",
+      "edge_hier": "513->9312: 0"
+    },
+    {
+      "source": 513,
+      "target": 9407,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco router and security device manager",
+      "dst_name": "amm-security/vpn",
+      "edge_hier": "513->9407: 0"
+    },
+    {
+      "source": 9014,
+      "target": 513,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "voice - communications manager additional apps and plugins",
+      "dst_name": "cisco router and security device manager",
+      "edge_hier": "9014->513: 0"
+    },
+    {
+      "source": 9014,
+      "target": 226,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "voice - communications manager additional apps and plugins",
+      "dst_name": "cisco catalyst 6500 series supervisor engines",
+      "edge_hier": "9014->226: 0"
+    },
+    {
+      "source": 1014,
+      "target": 3474,
+      "src_type": 0,
+      "dst_type": 1,
+      "src_name": "cisco unified computing system b-series blade servers",
+      "dst_name": "multiple vulnerabilities in cisco asa 5500 series adaptive security appliances",
+      "edge_hier": "1014->3474: 0"
+    },
+    {
+      "source": 3474,
+      "target": 513,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "multiple vulnerabilities in cisco asa 5500 series adaptive security appliances",
+      "dst_name": "cisco router and security device manager",
+      "edge_hier": "3474->513: 0"
+    },
+    {
+      "source": 231,
+      "target": 9003,
+      "src_type": 0,
+      "dst_type": 4,
+      "src_name": "cisco anyres vod (cal)",
+      "dst_name": "voice - gateways, gatekeepers, and atas",
+      "edge_hier": "231->9003: 0"
+    },
+    {
+      "source": 9003,
+      "target": 513,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "voice - gateways, gatekeepers, and atas",
+      "dst_name": "cisco router and security device manager",
+      "edge_hier": "9003->513: 0"
+    },
+    {
+      "source": 9003,
+      "target": 226,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "voice - gateways, gatekeepers, and atas",
+      "dst_name": "cisco catalyst 6500 series supervisor engines",
+      "edge_hier": "9003->226: 0"
+    },
+    {
+      "source": 226,
+      "target": 9243,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco catalyst 6500 series supervisor engines",
+      "dst_name": "apac-ggn-hardware",
+      "edge_hier": "226->9243: 0"
+    },
+    {
+      "source": 226,
+      "target": 9021,
+      "src_type": 0,
+      "dst_type": 4,
+      "src_name": "cisco catalyst 6500 series supervisor engines",
+      "dst_name": "router and ios architecture",
+      "edge_hier": "226->9021: 0"
+    },
+    {
+      "source": 226,
+      "target": 9564,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco catalyst 6500 series supervisor engines",
+      "dst_name": "rtp-vpn",
+      "edge_hier": "226->9564: 0"
+    },
+    {
+      "source": 226,
+      "target": 9312,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco catalyst 6500 series supervisor engines",
+      "dst_name": "ind-vpn",
+      "edge_hier": "226->9312: 0"
+    },
+    {
+      "source": 226,
+      "target": 9407,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco catalyst 6500 series supervisor engines",
+      "dst_name": "amm-security/vpn",
+      "edge_hier": "226->9407: 0"
+    },
+    {
+      "source": 9021,
+      "target": 1062,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "router and ios architecture",
+      "dst_name": "easy vpn",
+      "edge_hier": "9021->1062: 0"
+    },
+    {
+      "source": 9021,
+      "target": 662,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "router and ios architecture",
+      "dst_name": "cisco 12000 series spa interface processors running cisco ios software",
+      "edge_hier": "9021->662: 0"
+    },
+    {
+      "source": 9021,
+      "target": 1188,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "router and ios architecture",
+      "dst_name": "cisco 7600 series route switch processor 720",
+      "edge_hier": "9021->1188: 0"
+    },
+    {
+      "source": 9021,
+      "target": 513,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "router and ios architecture",
+      "dst_name": "cisco router and security device manager",
+      "edge_hier": "9021->513: 0"
+    },
+    {
+      "source": 9021,
+      "target": 226,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "router and ios architecture",
+      "dst_name": "cisco catalyst 6500 series supervisor engines",
+      "edge_hier": "9021->226: 0"
+    },
+    {
+      "source": 9024,
+      "target": 513,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "quality of service (qos) and session border control (sbc)",
+      "dst_name": "cisco router and security device manager",
+      "edge_hier": "9024->513: 0"
+    },
+    {
+      "source": 9024,
+      "target": 226,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "quality of service (qos) and session border control (sbc)",
+      "dst_name": "cisco catalyst 6500 series supervisor engines",
+      "edge_hier": "9024->226: 0"
+    },
+    {
+      "source": 9024,
+      "target": 662,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "quality of service (qos) and session border control (sbc)",
+      "dst_name": "cisco 12000 series spa interface processors running cisco ios software",
+      "edge_hier": "9024->662: 0"
+    },
+    {
+      "source": 9024,
+      "target": 1188,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "quality of service (qos) and session border control (sbc)",
+      "dst_name": "cisco 7600 series route switch processor 720",
+      "edge_hier": "9024->1188: 0"
+    },
+    {
+      "source": 9024,
+      "target": 2618,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "quality of service (qos) and session border control (sbc)",
+      "dst_name": "cisco catalyst 6500 series firewall services module",
+      "edge_hier": "9024->2618: 0"
+    },
+    {
+      "source": 9024,
+      "target": 1068,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "quality of service (qos) and session border control (sbc)",
+      "dst_name": "prime performance manager",
+      "edge_hier": "9024->1068: 0"
+    },
+    {
+      "source": 9024,
+      "target": 183,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "quality of service (qos) and session border control (sbc)",
+      "dst_name": "cisco 12000 series routers",
+      "edge_hier": "9024->183: 0"
+    },
+    {
+      "source": 9024,
+      "target": 7445,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "quality of service (qos) and session border control (sbc)",
+      "dst_name": "cisco web security and cisco email security appliance , no other cisco",
+      "edge_hier": "9024->7445: 0"
+    },
+    {
+      "source": 9243,
+      "target": 1062,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "apac-ggn-hardware",
+      "dst_name": "easy vpn",
+      "edge_hier": "9243->1062: 0"
+    },
+    {
+      "source": 2618,
+      "target": 9243,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco catalyst 6500 series firewall services module",
+      "dst_name": "apac-ggn-hardware",
+      "edge_hier": "2618->9243: 0"
+    },
+    {
+      "source": 2618,
+      "target": 9021,
+      "src_type": 0,
+      "dst_type": 4,
+      "src_name": "cisco catalyst 6500 series firewall services module",
+      "dst_name": "router and ios architecture",
+      "edge_hier": "2618->9021: 0"
+    },
+    {
+      "source": 2618,
+      "target": 9407,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco catalyst 6500 series firewall services module",
+      "dst_name": "amm-security/vpn",
+      "edge_hier": "2618->9407: 0"
+    },
+    {
+      "source": 2618,
+      "target": 9616,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco catalyst 6500 series firewall services module",
+      "dst_name": "ind-ncr-vpn",
+      "edge_hier": "2618->9616: 0"
+    },
+    {
+      "source": 1068,
+      "target": 9243,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "prime performance manager",
+      "dst_name": "apac-ggn-hardware",
+      "edge_hier": "1068->9243: 0"
+    },
+    {
+      "source": 1068,
+      "target": 9021,
+      "src_type": 0,
+      "dst_type": 4,
+      "src_name": "prime performance manager",
+      "dst_name": "router and ios architecture",
+      "edge_hier": "1068->9021: 0"
+    },
+    {
+      "source": 9515,
+      "target": 1062,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "cr-vpn-soltns",
+      "dst_name": "easy vpn",
+      "edge_hier": "9515->1062: 0"
+    },
+    {
+      "source": 183,
+      "target": 9515,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco 12000 series routers",
+      "dst_name": "cr-vpn-soltns",
+      "edge_hier": "183->9515: 0"
+    },
+    {
+      "source": 183,
+      "target": 9021,
+      "src_type": 0,
+      "dst_type": 4,
+      "src_name": "cisco 12000 series routers",
+      "dst_name": "router and ios architecture",
+      "edge_hier": "183->9021: 0"
+    },
+    {
+      "source": 7445,
+      "target": 9021,
+      "src_type": 0,
+      "dst_type": 4,
+      "src_name": "cisco web security and cisco email security appliance , no other cisco",
+      "dst_name": "router and ios architecture",
+      "edge_hier": "7445->9021: 0"
+    },
+    {
+      "source": 9564,
+      "target": 1062,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "rtp-vpn",
+      "dst_name": "easy vpn",
+      "edge_hier": "9564->1062: 0"
+    },
+    {
+      "source": 9312,
+      "target": 1062,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "ind-vpn",
+      "dst_name": "easy vpn",
+      "edge_hier": "9312->1062: 0"
+    },
+    {
+      "source": 9407,
+      "target": 1062,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "amm-security/vpn",
+      "dst_name": "easy vpn",
+      "edge_hier": "9407->1062: 0"
+    },
+    {
+      "source": 9616,
+      "target": 1062,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "ind-ncr-vpn",
+      "dst_name": "easy vpn",
+      "edge_hier": "9616->1062: 0"
+    }
+  ]
+}

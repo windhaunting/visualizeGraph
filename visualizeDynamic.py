@@ -25,9 +25,29 @@ class visualizeDynamic(object):
         pass
     
     
-    #main entry visualize matplotlib
+    def funcMainEntrySubgraphVisualizeD3DblpProductGraph(self):
+        '''
+        main entry visualize in d3 js
+        from a sub list ofnodes to get the subgraph from dblp data graph
+        then show in D3.js
+        '''
+          
+        ciscoEdgeListfile = "../../GraphQuerySearchRelatedPractice/Data/dblpParserGraph/output/finalOutput/newOutEdgeListFile.tsv"
+        ciscoNodeInfoFile = "../../GraphQuerySearchRelatedPractice/Data/dblpParserGraph/output/finalOutput/newOutNodeNameToIdFile.tsv"
+        G = readEdgeListToGraph(ciscoEdgeListfile, ciscoNodeInfoFile)
+    
+        outJsonFile = "outputPlot/subgraphDblpQueryResult.json"
+              #different test inputs below
+        
+        specificNodesLst = [188421, 188806]
+        candidatesNodesLst = [120096, 163106, 162686, 69846, 163004]     
+        
+        self.subgraphVisualizeD3Paths(G, specificNodesLst, candidatesNodesLst, outJsonFile)
+        
+        
     def funcMainEntrySubgraphVisualizePlotCisoProductGraph(self):
         '''
+        main entry visualize matplotlib
         from a sub list ofnodes to get the subgraph from cisco data graph
         then show with matplotlib
         '''
@@ -40,9 +60,9 @@ class visualizeDynamic(object):
         
         self.subgraphVisualizePlot(G, candidatesNodeIdLst)
     
-    #main entry visualize in d3 js
     def funcMainEntrySubgraphVisualizeD3CisoProductGraph(self):
         '''
+        main entry visualize in d3 js
         from a sub list ofnodes to get the subgraph from cisco data graph
         then show in D3.js
         '''
@@ -258,4 +278,6 @@ if __name__ == "__main__":
     #visualizeDynObj.funcMainEntrySubgraphVisualizePlotSyntheticGraph()
     #visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
     
-    visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
+    #visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
+    visualizeDynObj.funcMainEntrySubgraphVisualizeD3DblpProductGraph()
+

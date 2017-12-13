@@ -1,0 +1,76 @@
+{
+  "links": [
+    {
+      "source": 695138,
+      "target": 87764,
+      "src_type": 2,
+      "dst_type": 0,
+      "src_name": "type0inherit_695138_",
+      "dst_name": "type0hier_87764_",
+      "edge_hier": "695138->87764: 0"
+    },
+    {
+      "source": 87764,
+      "target": 13025,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "type0hier_87764_",
+      "dst_name": "type0hier_13025_",
+      "edge_hier": "87764->13025: 1"
+    },
+    {
+      "source": 13025,
+      "target": 208373,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "type0hier_13025_",
+      "dst_name": "type0hier_208373_",
+      "edge_hier": "13025->208373: -1"
+    },
+    {
+      "source": 13025,
+      "target": 13026,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "type0hier_13025_",
+      "dst_name": "type0hier_13026_",
+      "edge_hier": "13025->13026: 1"
+    },
+    {
+      "source": 13025,
+      "target": 87764,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "type0hier_13025_",
+      "dst_name": "type0hier_87764_",
+      "edge_hier": "13025->87764: -1"
+    },
+    {
+      "source": 208373,
+      "target": 15365,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "type0hier_208373_",
+      "dst_name": "type0hier_15365_",
+      "edge_hier": "208373->15365: -1"
+    },
+    {
+      "source": 208373,
+      "target": 13025,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "type0hier_208373_",
+      "dst_name": "type0hier_13025_",
+      "edge_hier": "208373->13025: 1"
+    },
+    {
+      "source": 655399,
+      "target": 208373,
+      "src_type": 2,
+      "dst_type": 0,
+      "src_name": "type0inherit_655399_",
+      "dst_name": "type0hier_208373_",
+      "edge_hier": "655399->208373: 0"
+    }
+  ]
+}

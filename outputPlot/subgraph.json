@@ -1,0 +1,214 @@
+{
+  "links": [
+    {
+      "value": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "source": 1,
+      "target": 2
+    },
+    {
+      "value": [
+        0,
+        0,
+        1,
+        3
+      ],
+      "source": 1,
+      "target": 3
+    },
+    {
+      "value": [
+        0,
+        0,
+        1,
+        4
+      ],
+      "source": 1,
+      "target": 4
+    },
+    {
+      "value": [
+        0,
+        0,
+        1,
+        5
+      ],
+      "source": 1,
+      "target": 5
+    },
+    {
+      "value": [
+        0,
+        0,
+        1,
+        6
+      ],
+      "source": 1,
+      "target": 6
+    },
+    {
+      "value": [
+        0,
+        0,
+        1,
+        7
+      ],
+      "source": 1,
+      "target": 7
+    },
+    {
+      "value": [
+        0,
+        0,
+        1,
+        8
+      ],
+      "source": 1,
+      "target": 8
+    },
+    {
+      "value": [
+        0,
+        0,
+        1,
+        9
+      ],
+      "source": 1,
+      "target": 9
+    },
+    {
+      "value": [
+        0,
+        0,
+        1,
+        1141
+      ],
+      "source": 1,
+      "target": 1141
+    },
+    {
+      "value": [
+        0,
+        1,
+        1,
+        3358
+      ],
+      "source": 1,
+      "target": 3358
+    },
+    {
+      "value": [
+        0,
+        0,
+        1,
+        671
+      ],
+      "source": 1,
+      "target": 671
+    },
+    {
+      "value": [
+        0,
+        0,
+        3,
+        1
+      ],
+      "source": 3,
+      "target": 1
+    },
+    {
+      "value": [
+        0,
+        1,
+        3,
+        8822
+      ],
+      "source": 3,
+      "target": 8822
+    },
+    {
+      "value": [
+        0,
+        0,
+        4,
+        1
+      ],
+      "source": 4,
+      "target": 1
+    },
+    {
+      "value": [
+        0,
+        1,
+        4,
+        5499
+      ],
+      "source": 4,
+      "target": 5499
+    },
+    {
+      "value": [
+        0,
+        1,
+        4,
+        5492
+      ],
+      "source": 4,
+      "target": 5492
+    },
+    {
+      "value": [
+        0,
+        1,
+        10,
+        2667
+      ],
+      "source": 10,
+      "target": 2667
+    },
+    {
+      "value": [
+        0,
+        0,
+        10,
+        130
+      ],
+      "source": 10,
+      "target": 130
+    },
+    {
+      "value": [
+        0,
+        0,
+        10,
+        11
+      ],
+      "source": 10,
+      "target": 11
+    },
+    {
+      "value": [
+        0,
+        0,
+        10,
+        708
+      ],
+      "source": 10,
+      "target": 708
+    },
+    {
+      "value": [
+        0,
+        1,
+        10,
+        2693
+      ],
+      "source": 10,
+      "target": 2693
+    }
+  ]
+}

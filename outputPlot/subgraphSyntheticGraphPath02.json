@@ -1,0 +1,94 @@
+{
+  "links": [
+    {
+      "source": 698890,
+      "target": 113498,
+      "src_type": 2,
+      "dst_type": 0,
+      "src_name": "type0inherit_698890_",
+      "dst_name": "type0hier_113498_",
+      "edge_hier": "698890->113498: 0"
+    },
+    {
+      "source": 698890,
+      "target": 160482,
+      "src_type": 2,
+      "dst_type": 0,
+      "src_name": "type0inherit_698890_",
+      "dst_name": "type0hier_160482_",
+      "edge_hier": "698890->160482: 0"
+    },
+    {
+      "source": 113498,
+      "target": 628210,
+      "src_type": 0,
+      "dst_type": 2,
+      "src_name": "type0hier_113498_",
+      "dst_name": "type0inherit_628210_",
+      "edge_hier": "113498->628210: 0"
+    },
+    {
+      "source": 113498,
+      "target": 662132,
+      "src_type": 0,
+      "dst_type": 2,
+      "src_name": "type0hier_113498_",
+      "dst_name": "type0inherit_662132_",
+      "edge_hier": "113498->662132: 0"
+    },
+    {
+      "source": 113498,
+      "target": 698890,
+      "src_type": 0,
+      "dst_type": 2,
+      "src_name": "type0hier_113498_",
+      "dst_name": "type0inherit_698890_",
+      "edge_hier": "113498->698890: 0"
+    },
+    {
+      "source": 628210,
+      "target": 291947,
+      "src_type": 2,
+      "dst_type": 0,
+      "src_name": "type0inherit_628210_",
+      "dst_name": "type0hier_291947_",
+      "edge_hier": "628210->291947: 0"
+    },
+    {
+      "source": 628210,
+      "target": 162111,
+      "src_type": 2,
+      "dst_type": 0,
+      "src_name": "type0inherit_628210_",
+      "dst_name": "type0hier_162111_",
+      "edge_hier": "628210->162111: 0"
+    },
+    {
+      "source": 662132,
+      "target": 264665,
+      "src_type": 2,
+      "dst_type": 0,
+      "src_name": "type0inherit_662132_",
+      "dst_name": "type0hier_264665_",
+      "edge_hier": "662132->264665: 0"
+    },
+    {
+      "source": 631375,
+      "target": 113498,
+      "src_type": 2,
+      "dst_type": 0,
+      "src_name": "type0inherit_631375_",
+      "dst_name": "type0hier_113498_",
+      "edge_hier": "631375->113498: 0"
+    },
+    {
+      "source": 664113,
+      "target": 113498,
+      "src_type": 2,
+      "dst_type": 0,
+      "src_name": "type0inherit_664113_",
+      "dst_name": "type0hier_113498_",
+      "edge_hier": "664113->113498: 0"
+    }
+  ]
+}

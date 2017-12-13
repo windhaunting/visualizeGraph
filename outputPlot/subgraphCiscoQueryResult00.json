@@ -1,0 +1,112 @@
+{
+  "links": [
+    {
+      "source": 3237,
+      "target": 3215,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system fabric interconnect man-in-the-middle vulnerability",
+      "dst_name": "cisco unified computing system",
+      "edge_hier": "3237->3215: 0"
+    },
+    {
+      "source": 3237,
+      "target": 678,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system fabric interconnect man-in-the-middle vulnerability",
+      "dst_name": "cisco unified computing system versions 2.1(1f) and prior",
+      "edge_hier": "3237->678: 0"
+    },
+    {
+      "source": 678,
+      "target": 99,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system versions 2.1(1f) and prior",
+      "dst_name": "cisco unified computing system versions 2.2 and prior",
+      "edge_hier": "678->99: -1"
+    },
+    {
+      "source": 678,
+      "target": 817,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system versions 2.1(1f) and prior",
+      "dst_name": "cisco unified computing system software versions 2.0 and prior",
+      "edge_hier": "678->817: 1"
+    },
+    {
+      "source": 678,
+      "target": 819,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system versions 2.1(1f) and prior",
+      "dst_name": "cisco unified computing system versions 2.0 and prior",
+      "edge_hier": "678->819: 1"
+    },
+    {
+      "source": 678,
+      "target": 818,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system versions 2.1(1f) and prior",
+      "dst_name": "cisco unified computing system versions 2.0",
+      "edge_hier": "678->818: 1"
+    },
+    {
+      "source": 5446,
+      "target": 3215,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system fabric interconnect directory traversal vulnerability",
+      "dst_name": "cisco unified computing system",
+      "edge_hier": "5446->3215: 0"
+    },
+    {
+      "source": 5446,
+      "target": 679,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system fabric interconnect directory traversal vulnerability",
+      "dst_name": "cisco unified computing system versions 2.1 and prior",
+      "edge_hier": "5446->679: 0"
+    },
+    {
+      "source": 679,
+      "target": 99,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system versions 2.1 and prior",
+      "dst_name": "cisco unified computing system versions 2.2 and prior",
+      "edge_hier": "679->99: -1"
+    },
+    {
+      "source": 679,
+      "target": 817,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system versions 2.1 and prior",
+      "dst_name": "cisco unified computing system software versions 2.0 and prior",
+      "edge_hier": "679->817: 1"
+    },
+    {
+      "source": 679,
+      "target": 819,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system versions 2.1 and prior",
+      "dst_name": "cisco unified computing system versions 2.0 and prior",
+      "edge_hier": "679->819: 1"
+    },
+    {
+      "source": 679,
+      "target": 818,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco unified computing system versions 2.1 and prior",
+      "dst_name": "cisco unified computing system versions 2.0",
+      "edge_hier": "679->818: 1"
+    }
+  ]
+}

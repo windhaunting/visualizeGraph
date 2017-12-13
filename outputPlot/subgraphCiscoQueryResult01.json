@@ -1,0 +1,184 @@
+{
+  "links": [
+    {
+      "source": 2020,
+      "target": 1514,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco asa software ikev1 and ikev2 buffer overflow vulnerability",
+      "dst_name": "cisco d9858 advanced receiver transcoder",
+      "edge_hier": "2020->1514: 0"
+    },
+    {
+      "source": 2020,
+      "target": 1063,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco asa software ikev1 and ikev2 buffer overflow vulnerability",
+      "dst_name": "cisco webex meetings server versions 1.x",
+      "edge_hier": "2020->1063: 0"
+    },
+    {
+      "source": 2020,
+      "target": 1064,
+      "src_type": 1,
+      "dst_type": 0,
+      "src_name": "cisco asa software ikev1 and ikev2 buffer overflow vulnerability",
+      "dst_name": "cisco webex meetings server versions 2.x",
+      "edge_hier": "2020->1064: 0"
+    },
+    {
+      "source": 1514,
+      "target": 9289,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco d9858 advanced receiver transcoder",
+      "dst_name": "htts-cr-hw",
+      "edge_hier": "1514->9289: 0"
+    },
+    {
+      "source": 1514,
+      "target": 9036,
+      "src_type": 0,
+      "dst_type": 5,
+      "src_name": "cisco d9858 advanced receiver transcoder",
+      "dst_name": "co-hardware",
+      "edge_hier": "1514->9036: 0"
+    },
+    {
+      "source": 9289,
+      "target": 4453,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "htts-cr-hw",
+      "dst_name": "cisco 12000 series gigabit switch router (gsr)",
+      "edge_hier": "9289->4453: 0"
+    },
+    {
+      "source": 9289,
+      "target": 3627,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "htts-cr-hw",
+      "dst_name": "cisco xr 12000 series engine 3 line cards",
+      "edge_hier": "9289->3627: 0"
+    },
+    {
+      "source": 9289,
+      "target": 7277,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "htts-cr-hw",
+      "dst_name": "affect cisco catalyst 6000 series switches",
+      "edge_hier": "9289->7277: 0"
+    },
+    {
+      "source": 9289,
+      "target": 1089,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "htts-cr-hw",
+      "dst_name": "catalyst 6000 supervisor module.",
+      "edge_hier": "9289->1089: 0"
+    },
+    {
+      "source": 9036,
+      "target": 4453,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "co-hardware",
+      "dst_name": "cisco 12000 series gigabit switch router (gsr)",
+      "edge_hier": "9036->4453: 0"
+    },
+    {
+      "source": 9036,
+      "target": 3627,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "co-hardware",
+      "dst_name": "cisco xr 12000 series engine 3 line cards",
+      "edge_hier": "9036->3627: 0"
+    },
+    {
+      "source": 9036,
+      "target": 7277,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "co-hardware",
+      "dst_name": "affect cisco catalyst 6000 series switches",
+      "edge_hier": "9036->7277: 0"
+    },
+    {
+      "source": 9036,
+      "target": 1089,
+      "src_type": 5,
+      "dst_type": 0,
+      "src_name": "co-hardware",
+      "dst_name": "catalyst 6000 supervisor module.",
+      "edge_hier": "9036->1089: 0"
+    },
+    {
+      "source": 1063,
+      "target": 1062,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco webex meetings server versions 1.x",
+      "dst_name": "easy vpn",
+      "edge_hier": "1063->1062: -1"
+    },
+    {
+      "source": 1064,
+      "target": 1062,
+      "src_type": 0,
+      "dst_type": 0,
+      "src_name": "cisco webex meetings server versions 2.x",
+      "dst_name": "easy vpn",
+      "edge_hier": "1064->1062: -1"
+    },
+    {
+      "source": 9021,
+      "target": 4453,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "router and ios architecture",
+      "dst_name": "cisco 12000 series gigabit switch router (gsr)",
+      "edge_hier": "9021->4453: 0"
+    },
+    {
+      "source": 9021,
+      "target": 3627,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "router and ios architecture",
+      "dst_name": "cisco xr 12000 series engine 3 line cards",
+      "edge_hier": "9021->3627: 0"
+    },
+    {
+      "source": 9021,
+      "target": 7277,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "router and ios architecture",
+      "dst_name": "affect cisco catalyst 6000 series switches",
+      "edge_hier": "9021->7277: 0"
+    },
+    {
+      "source": 9021,
+      "target": 1062,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "router and ios architecture",
+      "dst_name": "easy vpn",
+      "edge_hier": "9021->1062: 0"
+    },
+    {
+      "source": 9021,
+      "target": 1089,
+      "src_type": 4,
+      "dst_type": 0,
+      "src_name": "router and ios architecture",
+      "dst_name": "catalyst 6000 supervisor module.",
+      "edge_hier": "9021->1089: 0"
+    }
+  ]
+}
