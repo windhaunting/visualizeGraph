@@ -33,9 +33,9 @@ class visualizeDynamic(object):
         then show in D3.js
         '''
           
-        ciscoEdgeListfile = "../../GraphQuerySearchRelatedPractice/Data/dblpParserGraph/output/finalOutput/newOutEdgeListFile.tsv"
-        ciscoNodeInfoFile = "../../GraphQuerySearchRelatedPractice/Data/dblpParserGraph/output/finalOutput/newOutNodeNameToIdFile.tsv"
-        G = readEdgeListToGraph(ciscoEdgeListfile, ciscoNodeInfoFile)
+        dblpEdgeListfile = "../../GraphQuerySearchRelatedPractice/Data/dblpParserGraph/output/finalOutput/newOutEdgeListFile.tsv"
+        dblpNodeInfoFile = "../../GraphQuerySearchRelatedPractice/Data/dblpParserGraph/output/finalOutput/newOutNodeNameToIdFile.tsv"
+        G = readEdgeListToGraph(dblpEdgeListfile, dblpNodeInfoFile)
     
         outJsonFile = "outputPlot/subgraphDblpQueryResult.json"
               #different test inputs below
