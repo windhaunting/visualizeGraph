@@ -40,9 +40,12 @@ class visualizeDynamic(object):
         outJsonFile = "outputPlot/subgraphDblpQueryResult.json"
               #different test inputs below
         
-        specificNodesLst = [188421, 188806]
-        candidatesNodesLst = [162877, 5965, 163611, 42475, 164939]     
+        #specificNodesLst = [188421, 188806]
+        #candidatesNodesLst = [162877, 5965, 163611, 42475, 164939]     
         
+        specificNodesLst = [188912, 188400, 188914]
+        candidatesNodesLst = [163106, 72184, 25180, 163434, 73830]     
+   
         self.subgraphVisualizeD3Paths(G, specificNodesLst, candidatesNodesLst, outJsonFile)
         
         
