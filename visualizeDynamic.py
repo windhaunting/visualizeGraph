@@ -46,7 +46,7 @@ class visualizeDynamic(object):
         specificNodesLst = [188912, 188400, 188914]
         candidatesNodesLst = [163106, 72184, 25180, 163434, 73830]     
    
-        self.subgraphVisualizeD3Paths(G, specificNodesLst, candidatesNodesLst, outJsonFile)
+        self.subgraphVisualizeD3PathsStarQuery(G, specificNodesLst, candidatesNodesLst, outJsonFile)
         
         
     def funcMainEntrySubgraphVisualizePlotCisoProductGraph(self):
@@ -90,7 +90,7 @@ class visualizeDynamic(object):
         specificNodesLst = [2020, 9021, 9024]
         candidatesNodesLst = [1062, 662, 1188, 513, 226]     
         
-        self.subgraphVisualizeD3Paths(G, specificNodesLst, candidatesNodesLst, outJsonFile)
+        self.subgraphVisualizeD3PathsStarQuery(G, specificNodesLst, candidatesNodesLst, outJsonFile)
 
     #main entry visualize matplotlib
     def funcMainEntrySubgraphVisualizePlotSyntheticGraph(self):
@@ -130,10 +130,11 @@ class visualizeDynamic(object):
         #specificNodesLst = [698890, 631375, 664113]
         #candidatesNodesLst = [113498, 160482, 291947, 264665, 162111]
              
-        specificNodesLst = [695138, 655399, 621354]
-        candidatesNodesLst = [87764, 13025, 208373, 13024, 13026]
-           
-        self.subgraphVisualizeD3Paths(G, specificNodesLst, candidatesNodesLst, outJsonFile)
+        #specificNodesLst = [695138, 655399, 621354]
+        #candidatesNodesLst = [87764, 13025, 208373, 13024, 13026]
+        
+        #self.subgraphVisualizeD3PathsStarQuery(G, specificNodesLst, candidatesNodesLst, outJsonFile)
+        
 
     #visualize in d3 js
     def subgraphVisualizeD3NodeNeighbor(self, G, candidatesNodeIdLst, outJsonFile):
@@ -161,11 +162,21 @@ class visualizeDynamic(object):
         self.saveToJson(newG, outJsonFile)
         webbrowser.get('firefox').open_new_tab('plotIndex.html')  
     
-    def subgraphVisualizeD3Paths(self, G, specificNodesLst, candidatesNodeIdLst, outJsonFile):
+    def subgraphVisualizeD3PathsStarQuery(self, G, specificNodesLst, candidatesNodeIdLst, outJsonFile):
         '''
-        visualize the shortest path from specificNodesLst to candidatesNodeIdLst
+        visualize the shortest path from specificNodesLst to candidatesNodeIdLst for star query
         '''
-         #get nodes and edge to create a new graph
+        #get nodes and edge to create a new graph
+        newG = nx.MultiDiGraph()           #nx.DiGraph()
+        for srcId in specificNodesLst:
+            
+            
+        
+    def subgraphVisualizeD3PathsStarQuery(self, G, specificNodesLst, candidatesNodeIdLst, outJsonFile):
+        '''
+        visualize the shortest path from specificNodesLst to candidatesNodeIdLst for star query
+        '''
+        #get nodes and edge to create a new graph
         newG = nx.MultiDiGraph()           #nx.DiGraph()
         for srcId in specificNodesLst:
             #nodeType = G.node[srcId]['labelType']
