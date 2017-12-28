@@ -134,7 +134,10 @@ class visualizeDynamic(object):
         #candidatesNodesLst = [87764, 13025, 208373, 13024, 13026]
         
         #self.subgraphVisualizeD3PathsStarQuery(G, specificNodesLst, candidatesNodesLst, outJsonFile)
-        
+        pairsLstD3 = [([663580, 775322], [34728]), ([34728], [663580, 648523]), ([760390], [643721, 693810, 615185, 643721]),
+                       ([663580, 648523], [643721, 693810, 615185, 643721])]
+                 
+        self.subgraphVisualizeD3PathsNonStarQuery(G, pairsLstD3, outJsonFile)
 
     #visualize in d3 js
     def subgraphVisualizeD3NodeNeighbor(self, G, candidatesNodeIdLst, outJsonFile):
@@ -162,15 +165,33 @@ class visualizeDynamic(object):
         self.saveToJson(newG, outJsonFile)
         webbrowser.get('firefox').open_new_tab('plotIndex.html')  
     
-    def subgraphVisualizeD3PathsStarQuery(self, G, specificNodesLst, candidatesNodeIdLst, outJsonFile):
+    def subgraphVisualizeD3PathsNonStarQuery(self, G, pairsLstD3, outJsonFile):
         '''
-        visualize the shortest path from specificNodesLst to candidatesNodeIdLst for star query
+        visualize the shortest path from specificNodesLst to candidatesNodeIdLst for non-star generic query
         '''
         #get nodes and edge to create a new graph
         newG = nx.MultiDiGraph()           #nx.DiGraph()
-        for srcId in specificNodesLst:
-            
-            
+        for prs in pairsLstD3:
+            srcIdLst = prs[0]
+            dstIdLst = prs[1]
+            for srcId in srcIdLst:
+                for dstId in dstIdLst:
+                    #get all shortest paths in [srcId, dstId]
+                    shortestPathLst = [p for p in nx.all_shortest_paths(G,source=srcId,target=dstId)]   # nx.all_shortest_paths(G, srcId, dstId)
+                    print ('subgraphVisualizeD3Paths:', srcId, dstId, shortestPathLst)
+                    #get nodes
+                    for onePath in shortestPathLst:
+                        prevNd = onePath[0]
+                        for nd in onePath:
+                            newG.add_node(nd, labelType=G.node[nd]['labelType'], labelName=G.node[nd]['labelName'])
+                            #construct the edge along the path
+                            if prevNd != nd:
+                                newG.add_edge(prevNd, nd, key='hier', edgeHierDistance = G[prevNd][nd]['hierarchy']['edgeHierDistance'])
+                            prevNd = nd
+        
+        print ('subgraphVisualizeD3Paths node and edge sizes: ', len(G), G.size(), len(newG), newG.size())
+        self.saveToJson(newG, outJsonFile)
+        
         
     def subgraphVisualizeD3PathsStarQuery(self, G, specificNodesLst, candidatesNodeIdLst, outJsonFile):
         '''
@@ -291,8 +312,8 @@ if __name__ == "__main__":
     #visualizeDynObj.funcMainEntrySubgraphVisualizePlot()
         
     #visualizeDynObj.funcMainEntrySubgraphVisualizePlotSyntheticGraph()
-    #visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
+    visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
     
     #visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
-    visualizeDynObj.funcMainEntrySubgraphVisualizeD3DblpProductGraph()
+    #visualizeDynObj.funcMainEntrySubgraphVisualizeD3DblpProductGraph()
 
