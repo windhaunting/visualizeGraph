@@ -120,7 +120,7 @@ class visualizeDynamic(object):
         G = readEdgeListToGraph(syntheticGraphEdgeListFile, syntheticGraphNodeInfoFile)
         #outJsonFile = "outputPlot/subgraphSyntheticGraph.json"
 
-        outJsonFile = "outputPlot/subgraphSyntheticGraphPath.json"
+        outJsonFile = "outputPlot/subgraphSyntheticGraphPathNonStar.json"
         #specificNodesLst = [662132, 609465]
         #candidatesNodesLst = [113498, 174080, 264665, 188907, 66531]
         
