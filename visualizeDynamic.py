@@ -93,7 +93,9 @@ class visualizeDynamic(object):
 
         outJsonFile = "outputPlot/subgraphCiscoQueryResultNonStar.json"
 
-        pairsLstD3 = [([663580, 775322], [34728])]
+        pairsLstD3 = [([9095, 5737], [4554]), ([5126, 5512], [8091]), ([5126, 5512], [4409]), ([5126, 5512], [6827]),
+                      ([1131, 1036], [6609]), ([1131, 1036],[3358]), ([4554],[8091]), ([4554],[4409]), ([4554], [6827]), ([8091], [6609]),
+                      ([4409], [6609]), ([6827], [6609]), ([6827], [3358]), ([4409], [3358])]
                  
         self.subgraphVisualizeD3PathsNonStarQuery(G, pairsLstD3, outJsonFile)
         
@@ -317,8 +319,9 @@ if __name__ == "__main__":
     #visualizeDynObj.funcMainEntrySubgraphVisualizePlot()
         
     #visualizeDynObj.funcMainEntrySubgraphVisualizePlotSyntheticGraph()
-    visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
+    #visualizeDynObj.funcMainEntrySubgraphVisualizeD3SyntheticGraph()
     
-    #visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
+    visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
+    
     #visualizeDynObj.funcMainEntrySubgraphVisualizeD3DblpProductGraph()
 
