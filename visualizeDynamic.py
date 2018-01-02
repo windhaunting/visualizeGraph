@@ -75,8 +75,7 @@ class visualizeDynamic(object):
         ciscoNodeInfoFile = "../../GraphQuerySearchRelatedPractice/Data/ciscoDataGraph/ciscoDataGraphInfo1.0/nodeInfoPart1.0"
         G = readEdgeListToGraph(ciscoEdgeListfile, ciscoNodeInfoFile)
     
-        outJsonFile = "outputPlot/subgraphCiscoQueryResult.json"
-      
+        #outJsonFile = "outputPlot/subgraphCiscoQueryResult.json"   
         #different test inputs below
         #specificNodesLst = [3237, 5446]
         #candidatesNodesLst = [3215, 99, 817, 819, 818]
@@ -87,11 +86,17 @@ class visualizeDynamic(object):
         #specificNodesLst = [3237, 5446, 3243]
         #candidatesNodesLst = [817, 818, 819, 99, 3215]     
         
-        specificNodesLst = [2020, 9021, 9024]
-        candidatesNodesLst = [1062, 662, 1188, 513, 226]     
+        #specificNodesLst = [2020, 9021, 9024]
+        #candidatesNodesLst = [1062, 662, 1188, 513, 226]     
         
-        self.subgraphVisualizeD3PathsStarQuery(G, specificNodesLst, candidatesNodesLst, outJsonFile)
+        #self.subgraphVisualizeD3PathsStarQuery(G, specificNodesLst, candidatesNodesLst, outJsonFile)
 
+        outJsonFile = "outputPlot/subgraphCiscoQueryResultNonStar.json"
+
+        pairsLstD3 = [([663580, 775322], [34728])]
+                 
+        self.subgraphVisualizeD3PathsNonStarQuery(G, pairsLstD3, outJsonFile)
+        
     #main entry visualize matplotlib
     def funcMainEntrySubgraphVisualizePlotSyntheticGraph(self):
         '''
