@@ -26,7 +26,7 @@ class visualizeDynamic(object):
         pass
     
     
-    def funcMainEntrySubgraphVisualizeD3DblpProductGraph(self):
+    def funcMainEntrySubgraphVisualizeD3DblpGraph(self):
         '''
         main entry visualize in d3 js
         from a sub list ofnodes to get the subgraph from dblp data graph
@@ -43,11 +43,17 @@ class visualizeDynamic(object):
         #specificNodesLst = [188421, 188806]
         #candidatesNodesLst = [162877, 5965, 163611, 42475, 164939]     
         
-        specificNodesLst = [188912, 188400, 188914]
-        candidatesNodesLst = [163106, 72184, 25180, 163434, 73830]     
-   
-        self.subgraphVisualizeD3PathsStarQuery(G, specificNodesLst, candidatesNodesLst, outJsonFile)
-        
+        #specificNodesLst = [188912, 188400, 188914]
+        #candidatesNodesLst = [163106, 72184, 25180, 163434, 73830]     
+        #self.subgraphVisualizeD3PathsStarQuery(G, specificNodesLst, candidatesNodesLst, outJsonFile)
+
+        outJsonFile = "outputPlot/subgraphDblpQueryResultNonStar.json"
+
+        pairsLstD3 = [([4630, 5097], [4724]), ([2701], [8992]), ([9106], [2618, 160, 1144, 4106, 3946]), ([4724], [8992]),
+                        ([8992], [2618]), ([8992], [160]), ([8992], [1144]), ([8992], [4106]), ([8992], [3946])]
+         
+                 
+        self.subgraphVisualizeD3PathsNonStarQuery(G, pairsLstD3, outJsonFile)
         
     def funcMainEntrySubgraphVisualizePlotCisoProductGraph(self):
         '''
@@ -92,11 +98,19 @@ class visualizeDynamic(object):
         #self.subgraphVisualizeD3PathsStarQuery(G, specificNodesLst, candidatesNodesLst, outJsonFile)
 
         outJsonFile = "outputPlot/subgraphCiscoQueryResultNonStar.json"
-
+        '''
         pairsLstD3 = [([9095, 5737], [4554]), ([5126, 5512], [8091]), ([5126, 5512], [4409]), ([5126, 5512], [6827]),
                       ([1131, 1036], [6609]), ([1131, 1036],[3358]), ([4554],[8091]), ([4554],[4409]), ([4554], [6827]), ([8091], [6609]),
                       ([4409], [6609]), ([6827], [6609]), ([6827], [3358]), ([4409], [3358])]
-                 
+        '''
+        '''
+        pairsLstD3 = [([4630, 5097], [4724]), ([2701], [8992]), ([9106], [2618, 160, 1144, 4106, 3946]), ([4724], [8992]),
+                        ([8992], [2618]), ([8992], [160]), ([8992], [1144]), ([8992], [4106]), ([8992], [3946])]  
+        '''
+        
+        pairsLstD3 = [([4630, 5097], [4724]), ([2701], [8992]), ([9106], [2618, 160, 1144, 4106, 3946]), ([4724], [8992]),
+                        ([8992], [2618])]  
+        
         self.subgraphVisualizeD3PathsNonStarQuery(G, pairsLstD3, outJsonFile)
         
     #main entry visualize matplotlib
@@ -323,5 +337,5 @@ if __name__ == "__main__":
     
     visualizeDynObj.funcMainEntrySubgraphVisualizeD3CisoProductGraph()
     
-    #visualizeDynObj.funcMainEntrySubgraphVisualizeD3DblpProductGraph()
+    #visualizeDynObj.funcMainEntrySubgraphVisualizeD3DblpGraph()
 
