@@ -50,7 +50,7 @@ class visualizeDynamic(object):
         outJsonFile = "outputPlot/subgraphDblpQueryResultNonStar.json"
 
         pairsLstD3 = [([188464, 188499], [73830]), ([188499, 188742], [5965]), ([15624, 162985], [21931]), ([73830], [5965]),
-                        ([5965], [21931])]
+                        ([5965], [71091])]
          
                  
         self.subgraphVisualizeD3PathsNonStarQuery(G, pairsLstD3, outJsonFile)
